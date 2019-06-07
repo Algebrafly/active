@@ -1,6 +1,7 @@
 package com.xiaoyun.active.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
+import lombok.extern.slf4j.Slf4j;
 import org.activiti.engine.ProcessEngineConfiguration;
 import org.activiti.spring.SpringProcessEngineConfiguration;
 import org.activiti.spring.boot.AbstractProcessEngineAutoConfiguration;
@@ -22,9 +23,8 @@ import javax.sql.DataSource;
  * ================================
  */
 @Configuration
+@Slf4j
 public class ActitytiDataSourceConfig extends AbstractProcessEngineAutoConfiguration {
-
-    private static final Logger log = LogManager.getLogger(ActitytiDataSourceConfig.class);
 
 
     @Bean(name = "activitiDataSource")
