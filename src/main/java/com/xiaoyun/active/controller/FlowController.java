@@ -114,7 +114,7 @@ public class FlowController {
         if (outgoingTransitions != null && !outgoingTransitions.isEmpty()) {
             Map<String, Object> variables = new HashMap<>();
             //智能做法：根据上面匹配出参数key
-            variables.put("apply_status", status);
+            variables.put("status", status);
             //任务完成，设置本签收人员
             //设置审核人
             Authentication.setAuthenticatedUserId("user_key_" + userName + "@id_" + userId + "");
