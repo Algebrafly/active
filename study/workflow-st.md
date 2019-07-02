@@ -1,24 +1,24 @@
 
 
-![ybd_workflow_model](\work-flow-md\ybd_workflow_model.png)
+![ybd_workflow_model](./work-flow-md/ybd_workflow_model.png)
 
 ##### 一、核心表
 
-![表总览](\work-flow-md\表总览.jpg)
+![表总览](./work-flow-md/表总览.jpg)
 
 ###### 1.历史表
 
 **表名:ACT_HI_PROCINST（历史流程实例信息）**
 
-![ACT_HI_PROCINST](\work-flow-md\ACT_HI_PROCINST.jpg)
+![ACT_HI_PROCINST](./work-flow-md/ACT_HI_PROCINST.jpg)
 
 **表名：ACT_HI_ACTINST（历史节点表）**
 
-![ACT_HI_ACTINST](\work-flow-md\ACT_HI_ACTINST.jpg)
+![ACT_HI_ACTINST](./work-flow-md/ACT_HI_ACTINST.jpg)
 
 **表名:ACT_HI_TASKINST（历史任务流程实例信息）**
 
-![ACT_HI_TASKINST](\work-flow-md\ACT_HI_TASKINST.jpg)
+![ACT_HI_TASKINST](./work-flow-md/ACT_HI_TASKINST.jpg)
 
  **表名:ACT_HI_COMMENT（历史审批意见表）**
 
@@ -48,7 +48,7 @@
 
 由模型所创建的审批流程
 
-![ACT_RE_PROCDEF](\work-flow-md\ACT_RE_PROCDEF.jpg)
+![ACT_RE_PROCDEF](./work-flow-md/ACT_RE_PROCDEF.jpg)
 
 'RE'表示repository。 这个前缀的表包含了流程定义和流程静态资源 （图片，规则，等等）。
 
@@ -60,13 +60,13 @@
 
 我的代办任务查询表（发起的某一审批流程实例）
 
-![ACT_RU_EXECUTION](\work-flow-md\ACT_RU_EXECUTION.jpg)
+![ACT_RU_EXECUTION](./work-flow-md/ACT_RU_EXECUTION.jpg)
 
 **表名:ACT_RU_TASK(运行时任务数据表)**
 
 代办任务查询表：某一审批流程下的，某一节点的审批任务
 
-![ACT_RU_TASK](\work-flow-md\ACT_RU_TASK.jpg)
+![ACT_RU_TASK](./work-flow-md/ACT_RU_TASK.jpg)
 
 
 
@@ -88,7 +88,7 @@
 
 ##### 二、Activiti中流程对象之间的关系
 
-![流程对象](\work-flow-md\流程对象.png)
+![流程对象](./work-flow-md/流程对象.png)
 
 
 
@@ -386,7 +386,7 @@
 
 在Activiti中最核心的类，其他的类都是由他而来。
 
-![ProcessEngine](\work-flow-md\ProcessEngine.jpg)
+![ProcessEngine](./work-flow-md/ProcessEngine.jpg)
 
 各个service的作用：
 
@@ -401,7 +401,7 @@
 
 ###### 5.2 ProcessInstance
 
-![ProcessInstance](\work-flow-md\ProcessInstance.jpg)
+![ProcessInstance](./work-flow-md/ProcessInstance.jpg)
 
 我们可以利用这个对象来了解当前流程实例的进度等信息。流程实例就表示一个流程从开始到结束的最大的流程分支，即一个流程中流程实例只有一个。对应表格 act_re_procdef ，查询的基本是该表格的配置字段。
 
