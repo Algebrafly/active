@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/processdef">
+  <process id="process" isExecutable="true">
+    <startEvent id="sid-828E8E16-C81D-4F42-BEEA-9F84EE7321F6" name="开始"></startEvent>
+    <userTask id="sid-B3A57E46-D777-45D7-82A6-9A64B5A73D71" name="员工"></userTask>
+    <userTask id="sid-4AAFE6E2-596F-4E04-9114-28385366C3D0" name="直属经理"></userTask>
+    <userTask id="sid-98795BAA-98EE-4E36-A03E-BB4D74BD5C3A" name="部门主管"></userTask>
+    <endEvent id="sid-9E5E89F4-7CF0-42B3-9786-CA801C3BE148" name="结束"></endEvent>
+    <sequenceFlow id="sid-AC831D88-3418-4A6F-9772-9C4862819A43" name="提交" sourceRef="sid-828E8E16-C81D-4F42-BEEA-9F84EE7321F6" targetRef="sid-B3A57E46-D777-45D7-82A6-9A64B5A73D71"></sequenceFlow>
+    <sequenceFlow id="sid-6502B6CE-A970-4174-B008-3884D97191FE" name="提交" sourceRef="sid-B3A57E46-D777-45D7-82A6-9A64B5A73D71" targetRef="sid-4AAFE6E2-596F-4E04-9114-28385366C3D0"></sequenceFlow>
+    <sequenceFlow id="sid-FE5335B6-42BB-4F9D-A9CD-3DCB48BA34DD" name="提交" sourceRef="sid-4AAFE6E2-596F-4E04-9114-28385366C3D0" targetRef="sid-98795BAA-98EE-4E36-A03E-BB4D74BD5C3A">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${apply_status == '1'}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="sid-AA20F1C7-C96A-4DBA-AF3F-BA055EF279EF" name="提交" sourceRef="sid-98795BAA-98EE-4E36-A03E-BB4D74BD5C3A" targetRef="sid-9E5E89F4-7CF0-42B3-9786-CA801C3BE148">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${apply_status == '1'}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="sid-9F580B1C-B46D-432E-8B4D-B1A333D3E066" name="驳回" sourceRef="sid-98795BAA-98EE-4E36-A03E-BB4D74BD5C3A" targetRef="sid-B3A57E46-D777-45D7-82A6-9A64B5A73D71">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${apply_status == '0'}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="sid-AF841678-6FC5-4F7B-85C2-0ED7C334C222" name="驳回" sourceRef="sid-4AAFE6E2-596F-4E04-9114-28385366C3D0" targetRef="sid-B3A57E46-D777-45D7-82A6-9A64B5A73D71">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${apply_status == '0'}]]></conditionExpression>
+    </sequenceFlow>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_process">
+    <bpmndi:BPMNPlane bpmnElement="process" id="BPMNPlane_process">
+      <bpmndi:BPMNShape bpmnElement="sid-828E8E16-C81D-4F42-BEEA-9F84EE7321F6" id="BPMNShape_sid-828E8E16-C81D-4F42-BEEA-9F84EE7321F6">
+        <omgdc:Bounds height="30.0" width="30.0" x="56.5" y="216.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-B3A57E46-D777-45D7-82A6-9A64B5A73D71" id="BPMNShape_sid-B3A57E46-D777-45D7-82A6-9A64B5A73D71">
+        <omgdc:Bounds height="80.0" width="100.0" x="195.0" y="191.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-4AAFE6E2-596F-4E04-9114-28385366C3D0" id="BPMNShape_sid-4AAFE6E2-596F-4E04-9114-28385366C3D0">
+        <omgdc:Bounds height="80.0" width="100.0" x="375.0" y="191.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-98795BAA-98EE-4E36-A03E-BB4D74BD5C3A" id="BPMNShape_sid-98795BAA-98EE-4E36-A03E-BB4D74BD5C3A">
+        <omgdc:Bounds height="80.0" width="100.0" x="570.0" y="191.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-9E5E89F4-7CF0-42B3-9786-CA801C3BE148" id="BPMNShape_sid-9E5E89F4-7CF0-42B3-9786-CA801C3BE148">
+        <omgdc:Bounds height="28.0" width="28.0" x="765.0" y="217.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="sid-6502B6CE-A970-4174-B008-3884D97191FE" id="BPMNEdge_sid-6502B6CE-A970-4174-B008-3884D97191FE">
+        <omgdi:waypoint x="295.0" y="231.0"></omgdi:waypoint>
+        <omgdi:waypoint x="375.0" y="231.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-AC831D88-3418-4A6F-9772-9C4862819A43" id="BPMNEdge_sid-AC831D88-3418-4A6F-9772-9C4862819A43">
+        <omgdi:waypoint x="86.5" y="231.0"></omgdi:waypoint>
+        <omgdi:waypoint x="195.0" y="231.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-FE5335B6-42BB-4F9D-A9CD-3DCB48BA34DD" id="BPMNEdge_sid-FE5335B6-42BB-4F9D-A9CD-3DCB48BA34DD">
+        <omgdi:waypoint x="475.0" y="231.0"></omgdi:waypoint>
+        <omgdi:waypoint x="570.0" y="231.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-9F580B1C-B46D-432E-8B4D-B1A333D3E066" id="BPMNEdge_sid-9F580B1C-B46D-432E-8B4D-B1A333D3E066">
+        <omgdi:waypoint x="620.0" y="191.0"></omgdi:waypoint>
+        <omgdi:waypoint x="620.0" y="145.0"></omgdi:waypoint>
+        <omgdi:waypoint x="244.8046875" y="145.0"></omgdi:waypoint>
+        <omgdi:waypoint x="244.90915697674419" y="191.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-AA20F1C7-C96A-4DBA-AF3F-BA055EF279EF" id="BPMNEdge_sid-AA20F1C7-C96A-4DBA-AF3F-BA055EF279EF">
+        <omgdi:waypoint x="670.0" y="231.0"></omgdi:waypoint>
+        <omgdi:waypoint x="765.0" y="231.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-AF841678-6FC5-4F7B-85C2-0ED7C334C222" id="BPMNEdge_sid-AF841678-6FC5-4F7B-85C2-0ED7C334C222">
+        <omgdi:waypoint x="425.0" y="271.0"></omgdi:waypoint>
+        <omgdi:waypoint x="425.0" y="310.0"></omgdi:waypoint>
+        <omgdi:waypoint x="245.0" y="310.0"></omgdi:waypoint>
+        <omgdi:waypoint x="245.0" y="271.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>
