@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:mysql://rm-bp1oydriw2vi7fc68qo.mysql.rds.aliyuncs.com:3306/ybd_workflow?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=true&serverTimezone=Asia/Shanghai
+    username: user_ybd
+    password: Lunz2017
+    driverClassName: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+  activiti:
+    check-process-definitions: false
+
+
+
+## 银保贷 - sit
+# rm-bp1oydriw2vi7fc68qo.mysql.rds.aliyuncs.com
+# user_ybdsit
+
+## 银保贷 - dev
+# rm-bp1oydriw2vi7fc68qo.mysql.rds.aliyuncs.com
+# user_ybd

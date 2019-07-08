@@ -1,19 +1,10 @@
 server:
-  port: 8181
+  port: 8182
 spring:
   application:
     name: activiti
   profiles:
-    active: hk
-
-
-## 银保贷 - sit
-# rm-bp1oydriw2vi7fc68qo.mysql.rds.aliyuncs.com
-# user_ybdsit
-
-## 银保贷 - dev
-# rm-bp1oydriw2vi7fc68qo.mysql.rds.aliyuncs.com
-# user_ybd
+    active: ybd
 
 
 ## 顺骋-dev

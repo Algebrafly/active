@@ -7,3 +7,9 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
   activiti:
     check-process-definitions: false
+
+
+
+# rm-bp1oydriw2vi7fc68qo.mysql.rds.aliyuncs.com
+# user_erchkpr
+# Lunz2017
