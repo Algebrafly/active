@@ -1,10 +1,43 @@
 server:
-  port: 8182
+  port: 8181
 spring:
   application:
     name: activiti
   profiles:
     active: ybd
+#    include: application-kafka.properties
+  # kafka配置
+#  kafka:
+#    bootstrap-servers: 192.168.159.131:9092
+#    producer:
+#      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+#      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+#    consumer:
+#      group-id: algebra-01
+#      enable-auto-commit: true
+#      auto-commit-interval: 1000
+#      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+  # spring-cloud-stream + kafka
+  cloud:
+    stream:
+      instance-count: 1
+      instance-index: 0
+      kafka:
+        binder:
+          brokers: 192.168.159.131:9092
+          zk-nodes: 192.168.159.131:2181
+          minPartitionCount: 1
+          autoCreateTopics: true
+          autoAddPartitions: true
+      bindings:
+        output:
+          destination: activiti-topic-test
+          content-type: text/plain
+          producer:
+            partitionCount: 1
+
 
 
 ## 顺骋-dev

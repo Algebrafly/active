@@ -42,7 +42,7 @@ public class Swagger2 {
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.xiaoyun.active.controller"))
                 .paths(PathSelectors.any())
-                .build().globalOperationParameters(pars)  ;
+                .build().globalOperationParameters(pars);
     }
 
     @SuppressWarnings("deprecation")
