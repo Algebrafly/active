@@ -25,15 +25,3 @@ spring:
             concurrency: 1
             partitioned: false
 
-
-## 顺骋-dev
-# rm-bp1oydriw2vi7fc68qo.mysql.rds.aliyuncs.com
-# user_ercsc
-# Lunz2017
-
-## 浩凯-dev
-# rm-bp1oydriw2vi7fc68qo.mysql.rds.aliyuncs.com
-# user_erchk
-# Lunz2017
-
-# 【996github】https://github.com/996icu/996.ICU

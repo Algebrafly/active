@@ -4,7 +4,7 @@ spring:
   application:
     name: activiti
   profiles:
-    active: ybd
+    active: saas
 #    include: application-kafka.properties
   # kafka配置
 #  kafka:
@@ -20,23 +20,23 @@ spring:
 #      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
 
   # spring-cloud-stream + kafka
-  cloud:
-    stream:
-      instance-count: 1
-      instance-index: 0
-      kafka:
-        binder:
-          brokers: 192.168.159.131:9092
-          zk-nodes: 192.168.159.131:2181
-          minPartitionCount: 1
-          autoCreateTopics: true
-          autoAddPartitions: true
-      bindings:
-        output:
-          destination: activiti-topic-test
-          content-type: text/plain
-          producer:
-            partitionCount: 1
+#  cloud:
+#    stream:
+#      instance-count: 1
+#      instance-index: 0
+#      kafka:
+#        binder:
+#          brokers: 192.168.159.131:9092
+#          zk-nodes: 192.168.159.131:2181
+#          minPartitionCount: 1
+#          autoCreateTopics: true
+#          autoAddPartitions: true
+#      bindings:
+#        output:
+#          destination: activiti-topic-test
+#          content-type: text/plain
+#          producer:
+#            partitionCount: 1
 
 
 

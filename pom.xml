@@ -161,13 +161,13 @@
             <!--</exclusions>-->
         <!--</dependency>-->
         <!--spring-cloud-stream-binder-kafka-->
-        <dependency>
+        <!--<dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-stream-binder-kafka</artifactId>
             <version>2.2.0.RELEASE</version>
-        </dependency>
+        </dependency>-->
         <!-- spring-cloud-stream -->
-        <dependency>
+        <!--<dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-stream</artifactId>
             <version>2.2.0.RELEASE</version>
@@ -177,19 +177,19 @@
                     <groupId>org.objenesis</groupId>
                 </exclusion>
             </exclusions>
-        </dependency>
+        </dependency>-->
         <!--spring-kafk-->
-        <dependency>
+        <!--<dependency>
             <groupId>org.springframework.kafka</groupId>
             <artifactId>spring-kafka</artifactId>
             <version>2.2.7.RELEASE</version>
-        </dependency>
+        </dependency>-->
         <!-- spring-boot-starter-actuator 统一用最新版本，避免冲突 -->
-        <dependency>
+        <!--<dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
             <version>2.1.4.RELEASE</version>
-        </dependency>
+        </dependency>-->
 
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
