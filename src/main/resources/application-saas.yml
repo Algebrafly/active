@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mysql://rm-bp1oydriw2vi7fc68qo.mysql.rds.aliyuncs.com:3306/saas_workflow?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=true&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://rm-bp1l32178m428898fko.mysql.rds.aliyuncs.com:3306/saas_workflow?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=true&serverTimezone=Asia/Shanghai
     username: user_saas
-    password: Lunz2017
+    password: Qq!zhongrui
     driverClassName: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
   activiti:
@@ -13,3 +13,13 @@ spring:
 #rm-bp1oydriw2vi7fc68qo.mysql.rds.aliyuncs.com
 #user_saas
 #Lunz2017
+
+#rm-bp1oydriw2vi7fc68qo.mysql.rds.aliyuncs.com
+#user_saaspr
+#Lunz2017
+
+
+#saas_prod
+#rm-bp1l32178m428898fko.mysql.rds.aliyuncs.com
+#user_saas
+#Qq!zhongrui

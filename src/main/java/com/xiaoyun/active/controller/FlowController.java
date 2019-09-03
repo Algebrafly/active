@@ -14,10 +14,7 @@ import org.activiti.engine.runtime.ProcessInstance;
 import org.activiti.engine.task.IdentityLink;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.List;
@@ -82,7 +79,9 @@ public class FlowController {
      * @Author: firstSeven
      * @date: 2019/5/17
      */
-    private TaskEntity findRunTaskByInstId(String instId) throws Exception {
+//    @GetMapping("/findRunTaskByInstId")
+//    @ApiOperation(value = "findRunTaskByInstId")
+    public TaskEntity findRunTaskByInstId(String instId) throws Exception {
         TaskEntity taskEntity = (TaskEntity) taskService.createTaskQuery()
                 .processInstanceId(instId)
                 .active()
@@ -91,6 +90,19 @@ public class FlowController {
             throw new Exception("任务实例未找到!");
         }
         return taskEntity;
+    }
+
+    @GetMapping("/findRunTaskByInstId")
+    @ApiOperation(value = "findRunTaskByInstId")
+    public String findRunTask(@RequestParam("instId") String instId){
+        String result = "";
+        try {
+            result = this.findRunTaskByInstId(instId).toString();
+            System.out.println(result);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
     }
 
     /**
