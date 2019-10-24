@@ -1,10 +1,10 @@
 server:
-  port: 8181
+  port: 8183
 spring:
   application:
     name: activiti
   profiles:
-    active: saas
+    active: sit
 #    include: application-kafka.properties
   # kafka配置
 #  kafka:
