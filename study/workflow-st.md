@@ -625,6 +625,8 @@ public class SpringContextHolder implements ApplicationContextAware, DisposableB
 
 
 
+6.工作流连接导线（路由）----如果删除一条线再重新画的话，就会重新生成新的ID，造成新旧数据冲突
+
 
 
 
